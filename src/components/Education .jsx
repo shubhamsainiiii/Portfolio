@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Education = () => {
     return (
-        <section id="education" className="py-16 flex justify-center mt-30">
-            <div className="w-[80vw] max-w-2xl bg-white shadow-gray-900 shadow-sm rounded-lg px-8 py-10">
+        <section id="education" className="py-12 flex justify-center mt-30">
+            <div className="w-[80vw] max-w-2xl bg-white shadow-gray-900 shadow-sm rounded-lg px-8 py-4">
                 {/* Education Title */}
                 <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
@@ -54,6 +54,26 @@ const Education = () => {
                         </h4>
                         <p className="text-[#274c77] flex items-center">
                             <FaCalendar className="mr-2" /><span className=" "> 2019-2022</span>
+                        </p>
+                    </div>
+                    <div className="relative">
+                        <div className="absolute -left-8 top-1 w-4 h-4 bg-[#001524] rounded-full"></div>
+                        <h3 className="text-xl font-bold">Master of Computer Applications (MCA)</h3>
+                        <h4 className="text-gray-600 font-semibold">
+                            University of Technology, Jaipur (Rajasthan)
+                        </h4>
+                        <p className="text-[#274c77] flex items-center">
+                            <FaCalendar className="mr-2" /><span className=" "> 2024-Present</span>
+                        </p>
+                    </div>
+                    <div className="relative">
+                        <div className="absolute -left-8 top-1 w-4 h-4 bg-[#001524] rounded-full"></div>
+                        <h3 className="text-xl font-bold">Full-Stack Web Development</h3>
+                        <h4 className="text-gray-600 font-semibold">
+                            Regex Software Services, Jaipur (Rajasthan)
+                        </h4>
+                        <p className="text-[#274c77] flex items-center">
+                            <FaCalendar className="mr-2" /><span className=" ">2024-2025</span>
                         </p>
                     </div>
                 </motion.div>

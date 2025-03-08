@@ -5,8 +5,8 @@ import { GiNinjaHeroicStance } from "react-icons/gi";
 
 const projects = [
     {
-        title: "Netflix Clone",
-        description: "I've created a responsive Netflix clone using HTML CSS.",
+        title: "Project 1",
+        description: "Description",
         icon: <GiNinjaHeroicStance className="text-4xl text-white" />,
         link: "#",
     },
@@ -18,7 +18,7 @@ const projects = [
     },
     {
         title: "Portfolio Website",
-        description: "I've created a portfolio website using HTML, CSS, and JavaScript to introduce myself.",
+        description: "I've created a portfolio website using ReactJS.",
         icon: <FaDesktop className="text-4xl text-white" />,
         link: "#",
     }
@@ -32,7 +32,7 @@ const Projects = () => {
                 <motion.div
                     initial={{ scale: 0.7, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 2 }}
+                    transition={{ duration: 2.6 }}
                     viewport={{ once: false }}
                     className="text-center"
                 >
@@ -48,18 +48,16 @@ const Projects = () => {
                             key={index}
                             initial={{ scale: 0.6, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
-                            transition={{ duration: 2 }}
+                            transition={{ duration: 2.6 }}
                             viewport={{ once: false }}
-                            whileHover={{ scale: 1.07 }}
-
-                            className="border-1 border-[#001524] p-6 rounded-lg shadow-sm shadow-[#001524] text-center hover:bg-[#c7f9cc] transition-transform duration-200"
+                            className="border-1 border-[#001524] p-6 rounded-lg shadow-sm shadow-[#001524] text-center hover:bg-[#c7f9cc] transition-colors duration-200"
                         >
                             <div className="w-16 h-16 mx-auto bg-[#001524] flex items-center justify-center rounded-full mb-4">
                                 {project.icon}
                             </div>
                             <h4 className="text-xl font-semibold mb-2">{project.title}</h4>
                             <p className="text-[#283d3b] font-normal mb-4">{project.description}</p>
-                            <a href={project.link} className="text-[#0d3b66] font-bold hover:underline">Click Here</a>
+                            <a href={project.link} className="text-[#0d3b66] font-bold hover:duration-200">Click Here</a>
                         </motion.div>
                     ))}
                 </div>
