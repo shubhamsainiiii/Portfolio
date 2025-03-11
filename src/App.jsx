@@ -6,9 +6,10 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Education from "./components/Education ";
 import Footer from "./components/Footer";
+
 const App = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
@@ -16,7 +17,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 };
 

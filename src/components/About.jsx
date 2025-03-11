@@ -37,7 +37,7 @@ const About = () => {
                         >
                             <h4 className="text-4xl font-bold text-teal-600 mb-4">Skills</h4>
                             <ul className="space-y-2 text-[#001524] font-semibold ">
-                                <li className="border-b border-gray-400 pb-2">Git, Github</li>
+                                <li className="border-b border-gray-400 pb-2">Git, Github, Linux</li>
                                 <li className="border-b border-gray-400 pb-2">C, C++, DSA</li>
                                 <li className="border-b border-gray-400 pb-2">HTML, CSS, JavaScript</li>
                                 <li className="border-b border-gray-400 pb-2">Tailwind CSS, ReactJS</li>
