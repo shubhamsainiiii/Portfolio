@@ -32,7 +32,7 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/shubham-saini-326727220" className="text-white text-xl hover:scale-110 transition duration-400">
                             <FaLinkedin />
                         </a>
-                        <a href="https://wa.me/qr/MPUK7LMAZQQHI1" className="text-white text-xl hover:scale-110 transition duration-400">
+                        <a href="https://wa.me/7691888950" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:scale-110 transition duration-400">
                             <FaWhatsapp />
                         </a>
                         <a href="https://instagram.com/shubhamsainiiiiii" className="text-white text-xl hover:scale-110 transition duration-400">

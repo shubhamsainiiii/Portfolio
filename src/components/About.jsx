@@ -42,7 +42,7 @@ const About = () => {
                                 <li className="border-b border-gray-400 pb-2">HTML, CSS, JavaScript</li>
                                 <li className="border-b border-gray-400 pb-2">Tailwind CSS, ReactJS</li>
                                 <li className="border-b border-gray-400 pb-2">ExpressJS, NodeJS</li>
-                                <li className="border-b border-gray-400 pb-2">MongoDB, SQL, AWS Cloud</li>
+                                <li className="border-b border-gray-400 pb-2">MongoDB, NoSQL</li>
                             </ul>
                         </motion.div>
                     </div>

@@ -96,7 +96,7 @@ const Contact = () => {
                         onChange={handleChange}
                         name="message"
                         rows="4"
-                        className="w-full p-3 mb-4 rounded-md focus:ring-1 hover:text-gray-800 shadow-sm shadow-[#001524] focus:outline-none transition-all duration-500 text-gray-500 font-semibold ease-in-out hover:bg-gray-300 hover:scale-102"
+                        className="w-full p-3 mb-4 rounded-md focus:ring-1 hover:text-gray-900 shadow-sm shadow-[#001524] focus:outline-none transition-all duration-500 text-gray-500 font-semibold ease-in-out hover:bg-gray-300 hover:scale-102"
                     />
 
                     {/* Submit Button */}
