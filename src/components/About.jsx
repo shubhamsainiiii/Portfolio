@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 const About = () => {
     return (
-        <section id="about" className="py-16 mt-24">
+        <section id="about" className="py-16 mt-24 font-primary">
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-10">
 
@@ -15,12 +15,12 @@ const About = () => {
                             viewport={{ once: false }}
                             className=""
                         >
-                            <h4 className="text-4xl font-bold text-teal-600 mb-4 lg:text-left ">About Me</h4>
-                            <ul className="text-[#001524] font-semibold mt-4 lg:space-y-4 text-lg text-justify">
-                                <li>I am a Full-Stack Developer specializing in the <span className="font-bold text-[#247ba0]">MERN Stack</span>, passionate about building scalable web applications.
+                            <h4 className="text-4xl font-bold text-[#22577a] mb-4 lg:text-left ">About Me</h4>
+                            <ul className="text-gray-900 font-semibold mt-4 lg:space-y-4 text-lg text-justify">
+                                <li>I am a Full-Stack Developer specializing in the <b className="text-[#22577a]">MERN Stack</b>, passionate about building scalable web applications.
                                 </li>
-                                <li>With a deep understanding of <span className="font-bold text-[#247ba0]">Data Structures & Algorithms (DSA) using C++</span>, I focus on writing efficient, clean, and optimized code.</li>
-                                <li>I have a strong belief in constantly learning and staying adaptable in the ever-evolving world of web development.I am actively looking for opportunities to expand my knowledge and skills.
+                                <li>With a deep understanding of <b className="text-[#22577a]">Data Structures & Algorithms (DSA) using C++</b>, I focus on writing efficient, clean, and optimized code.</li>
+                                <li>I have a strong belief in constantly learning and staying adaptable in the ever-evolving world of web development. I am actively looking for opportunities to expand my knowledge and skills.
                                 </li>
                             </ul>
                         </motion.div>
@@ -35,7 +35,7 @@ const About = () => {
                             viewport={{ once: false }}
                             className=""
                         >
-                            <h4 className="text-4xl font-bold text-teal-600 mb-4">Skills</h4>
+                            <h4 className="text-4xl font-bold text-[#22577a] mb-4">Skills</h4>
                             <ul className="space-y-2 text-[#001524] font-semibold ">
                                 <li className="border-b border-gray-400 pb-2">Git, Github, Linux</li>
                                 <li className="border-b border-gray-400 pb-2">C, C++, DSA</li>

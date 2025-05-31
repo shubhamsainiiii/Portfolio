@@ -43,7 +43,7 @@ const Footer = () => {
                         </a>
                     </div>
 
-                    <p className="text-sm">&copy; {new Date().getFullYear()} All Rights Reserved.</p>
+                    
                 </div>
             </motion.div>
         </footer>
