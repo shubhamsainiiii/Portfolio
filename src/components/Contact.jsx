@@ -72,7 +72,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full p-3 mb-4 rounded-md text-gray-500 font-semibold focus:outline-none shadow-sm shadow-gray-900"
+                        className="w-full p-3 mb-4 rounded-md text-gray-900 font-semibold focus:outline-none shadow-sm shadow-gray-900"
                     />
                     <input
                         type="text"
@@ -81,7 +81,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full p-3 mb-4 rounded-md text-gray-500 font-semibold focus:outline-none shadow-sm shadow-gray-900"
+                        className="w-full p-3 mb-4 rounded-md text-gray-900 font-semibold focus:outline-none shadow-sm shadow-gray-900"
                     />
                     <textarea
                         name="message"
@@ -90,7 +90,7 @@ const Contact = () => {
                         onChange={handleChange}
                         rows="4"
                         required
-                        className="w-full p-3 mb-4 rounded-md text-gray-500 font-semibold focus:outline-none shadow-sm shadow-gray-900"
+                        className="w-full p-3 mb-4 rounded-md text-gray-900 font-semibold focus:outline-none shadow-sm shadow-gray-900"
                     />
                     <motion.button
                         type="submit"

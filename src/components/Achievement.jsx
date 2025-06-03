@@ -4,27 +4,27 @@ import { FaCodepen, FaCode, FaLaptopCode, FaHackerrank } from "react-icons/fa";
 
 const achievements = [
     {
-        text: "Gold Badge on CodeChef – 500+ Problems Solved in C++",
+        text: "Silver Badge on CodeChef – 250+ Problems Solved in C++",
         platform: "CodeChef",
-        link: "https://www.codechef.com/users/yourusername",
+        link: "https://www.codechef.com/users/shubhcoding27",
         icon: <FaCodepen size={24} className="text-white" />
     },
     {
-        text: "Solved 100+ LeetCode Problems (Data Structures & Algorithms) in C++",
+        text: "Solved 75+ LeetCode Problems (Data Structures & Algorithms) in C++",
         platform: "LeetCode",
-        link: "https://leetcode.com/yourusername",
+        link: "https://leetcode.com/u/shubhamsaini27/",
         icon: <FaCode size={24} className="text-white" />
     },
+    // {
+    //     text: "Solved 150+ GeeksforGeeks Problems (Data Structures & Algorithms) in C++",
+    //     platform: "GeeksforGeeks",
+    //     link: "https://auth.geeksforgeeks.org/user/yourusername",
+    //     icon: <FaLaptopCode size={24} className="text-white" />
+    // },
     {
-        text: "Solved 150+ GeeksforGeeks Problems (Data Structures & Algorithms) in C++",
-        platform: "GeeksforGeeks",
-        link: "https://auth.geeksforgeeks.org/user/yourusername",
-        icon: <FaLaptopCode size={24} className="text-white" />
-    },
-    {
-        text: "HackerRank Certified Problem Solver in C++",
+        text: "Earned a 3-Star Badge in Problem Solving on HackerRank by solving DSA Problems using C++",
         platform: "HackerRank",
-        link: "https://www.hackerrank.com/yourusername",
+        link: "https://www.hackerrank.com/shubhamthoi27",
         icon: <FaHackerrank size={24} className="text-white" />
     }
 ];

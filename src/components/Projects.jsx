@@ -17,8 +17,8 @@ const projects = [
         link: "#",
     },
     {
-        title: "Portfolio Website",
-        description: "I've created a portfolio website using ReactJS.",
+        title: "Project 3",
+        description: "Description",
         icon: <FaDesktop className="text-4xl text-white" />,
         link: "#",
     },
