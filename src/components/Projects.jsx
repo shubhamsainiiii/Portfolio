@@ -1,14 +1,13 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
-import { FaUtensils, FaDesktop } from "react-icons/fa";
-import { GiNinjaHeroicStance } from "react-icons/gi";
+import { FaUtensils, FaDesktop, FaTools } from "react-icons/fa";
 
 const projects = [
     {
-        title: "Project 1",
-        description: "Description",
-        icon: <GiNinjaHeroicStance className="text-4xl text-white" />,
-        link: "#",
+        title: "Universal Repair Point",
+        description: "A fully responsive and interactive machine repairing service website built using React.js and Tailwind CSS.",
+        icon: <FaTools className="text-4xl text-white" />,
+        link: "https://github.com/shubhamsainiiii/repairing_website",
     },
     {
         title: "Project 2",
@@ -50,7 +49,7 @@ const Projects = () => {
                                     {project.icon}
                                 </div>
                                 <h4 className="text-xl text-gray-900 font-semibold mb-2">{project.title}</h4>
-                                <p className="text-gray-900 text-lg font-medium mb-4">{project.description}</p>
+                                <p className="text-gray-900 text-lg font-medium mb-4 ">{project.description}</p>
                                 <a
                                     href={project.link}
                                     target="_blank"

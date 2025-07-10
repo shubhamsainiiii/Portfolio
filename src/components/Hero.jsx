@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
@@ -13,11 +13,11 @@ const Hero = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 2 }}
                 viewport={{ once: false }}
-                className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-6 border-gray-900">
+                className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-900">
                 <img
                     src={shubhamCopy}
                     alt="Profile"
-                    className="w-full h-full object-cover cursor-pointer hover:scale-115 transition-transform duration-700"
+                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-700"
                 />
             </motion.div>
 
@@ -30,7 +30,6 @@ const Hero = () => {
             >
                 <h3 className="font-bold text-gray-900">Hi, My Name is</h3>
 
-                {/* Typing Effect */}
                 <h1 className="text-4xl md:text-4xl font-bold text-[#22577a]">
                     <TypeAnimation
                         sequence={["Shubham and i am ", 1000,
@@ -44,10 +43,9 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-justify text-gray-900 font-semibold mt-4">
-                    Welcome to my portfolio website! I'm a passionate and aspiring web developer with a strong desire to create innovative solutions and push the boundaries of technology.
+                    Welcome to my portfolio website! I am a passionate and aspiring web developer with a strong desire to create innovative solutions and push the boundaries of technology.
                 </p>
 
-                {/* Buttons */}
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-3 sm:space-y-0 sm:space-x-4">
                     <a href={ShubhamResume} className="bg-[#22577a] font-semibold text-[18px] text-white px-6 py-2 rounded-md hover:bg-[#08306b] transition duration-300">
                         Download CV
@@ -57,7 +55,7 @@ const Hero = () => {
                     </a>
                 </div>
 
-                {/* Social Links */}
+
                 <div className="flex justify-center md:justify-start mt-6 space-x-4">
                     <a href="mailto:shubhamthoi27@gmail.com" className="text-gray-800 text-2xl hover:scale-110    transition duration-400">
                         <FaEnvelope className="hover:text-gray-900" />

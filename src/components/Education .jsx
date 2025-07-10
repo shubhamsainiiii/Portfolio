@@ -1,5 +1,4 @@
 
-import React from "react";
 import { FaCalendar } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -46,14 +45,14 @@ const Education = () => {
                 </h3>
 
                 <div className="relative border-l-1 border-[#22577a] pl-6 space-y-5 mt-5">
-                    {educationData.map((edu, index) => (
+                    {educationData.map((item, index) => (
                         <div key={index} className="relative">
                             <div className="absolute -left-8 top-1.5 w-4 h-4 bg-gray-900 rounded-full"></div>
-                            <h4 className="text-xl text-gray-900 font-bold">{edu.title}</h4>
-                            <p className="text-gray-900 font-semibold">{edu.institute}</p>
+                            <h4 className="text-xl text-gray-900 font-bold">{item.title}</h4>
+                            <p className="text-gray-900 font-semibold">{item.institute}</p>
                             <p className="text-gray-900 flex items-center">
                                 <FaCalendar className="mr-2" />
-                                <span className="font-semibold">{edu.year}</span>
+                                <span className="font-semibold">{item.year}</span>
                             </p>
                         </div>
                     ))}

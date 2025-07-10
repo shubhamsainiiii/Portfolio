@@ -4,12 +4,16 @@ A modern, responsive personal portfolio website built with React.js to showcase 
 
 ## 🚀 Demo
 
-[Live Demo](https://your-portfolio-url.com) <!-- Replace with your actual deployed URL -->
+[Live Demo]   https://shubhaminnovates.netlify.app 
 
 ## 📸 Screenshots
+![Hero](./src/assets/Screenshots/Hero.png)
+![About](./src/assets/Screenshots/About.png)
+![Education](./src/assets/Screenshots/Education.png)
+![Projects](./src/assets/Screenshots/Projects.png)
+![Contact](./src/assets/Screenshots/Contact.png)
 
-<!-- Add screenshots of your portfolio here -->
-![Portfolio Screenshot](./screenshots/portfolio-preview.png)
+
 
 ## ✨ Features
 
@@ -29,7 +33,7 @@ A modern, responsive personal portfolio website built with React.js to showcase 
 - **Styling**: CSS3 (with modern features)
 - **Animations**: CSS animations/transitions
 - **Icons**: Font Awesome / React Icons
-- **Deployment**: [Netlify/Vercel/GitHub Pages] <!-- Specify your deployment platform -->
+- **Deployment**: Netlify 
 
 ## 🏗️ Project Structure
 
@@ -40,17 +44,18 @@ Personal_Portfolio/
 │   └── assets/
 ├── src/
 │   ├── components/
-│   │   ├── Header/
+│   │   ├── Navbar/
+│   │   ├── Hero/
 │   │   ├── About/
-│   │   ├── Skills/
+│   │   ├── Education/
 │   │   ├── Projects/
-│   │   ├── Contact/
-│   │   └── Footer/
+│   │   └── Contact/
 │   ├── assets/
 │   │   ├── images/
-│   │   └── icons/
-│   ├── styles/
+│   │   └── resume/
+│   ├── App.css
 │   ├── App.jsx
+│   ├── index.css
 │   └── main.jsx
 ├── package.json
 ├── vite.config.js
@@ -105,10 +110,12 @@ Make sure you have the following installed:
 
 ### Personal Information
 Update the following files with your personal information:
-- `src/components/About/About.jsx` - Your bio and introduction
-- `src/components/Skills/Skills.jsx` - Your technical skills
-- `src/components/Projects/Projects.jsx` - Your project portfolio
-- `src/components/Contact/Contact.jsx` - Your contact information
+- `src/components/Navbar.jsx` -  Links to scroll to my sections like About, Projects, Contact.
+- `src/components/Hero.jsx` - Banner with my name, short intro, and contact button.
+- `src/components/About.jsx` - Short bio and my skills.
+- `src/components/Education.jsx` - My education details
+- `src/components/Projects.jsx` - My projects to showcase my work.
+- `src/components/Contact.jsx` - Contact form or info to reach me.
 
 ### Styling
 - Modify CSS files in `src/styles/` to customize colors, fonts, and layouts
@@ -178,8 +185,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Shubham Saini**
 - GitHub: [@shubhamsainiiii](https://github.com/shubhamsainiiii)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/shubham-saini-326727220/)
+- Email: shubhamthoi27@gmail.com
 
 ## 🙏 Acknowledgments
 

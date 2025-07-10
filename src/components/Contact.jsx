@@ -1,47 +1,59 @@
-import React, { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 
 const Contact = () => {
-    const form = useRef();
-
-    const [formData, setformdata] = useState({
+    const [formData, setFormData] = useState({
         name: "",
         email: "",
         subject: "",
         message: "",
     });
 
+    const [sending, setSending] = useState(false);
+
     const handleChange = (e) => {
-        setformdata({ ...formData, [e.target.name]: e.target.value });
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const sendEmail = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
+        setSending(true);
 
-        emailjs.sendForm("service_pqdbsrs", "template_x9yfjtj", form.current, "DaSnMgLwjCDojIYbx")
-            .then(() => {
-                Swal.fire({
-                    title: "Success!",
-                    text: "Your message has been sent successfully!",
-                    icon: "success",
-                });
-                form.current.reset();
-                setformdata({
-                    name: "",
-                    email: "",
-                    subject: "",
-                    message: "",
-                });
-            })
-            .catch(() => {
-                Swal.fire({
-                    title: "Failed!",
-                    text: "Something went wrong. Please try again later.",
-                    icon: "error",
-                });
+        const formfield = {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        };
+
+        emailjs.send(
+            "service_59a6iwq",          // emailjs service ID
+            "template_ngwwcrl",         // emailjs template ID
+            formfield,
+            "UctGOMpY5pnxSU-7d"         // emailjs public key
+        ).then(() => {
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent successfully!",
+                icon: "success",
             });
+            setFormData({
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+            });
+            setSending(false);
+        }).catch(() => {
+            Swal.fire({
+                title: "Failed!",
+                text: "Something went wrong. Please try again later.",
+                icon: "error",
+            });
+            setSending(false);
+        });
     };
 
     return (
@@ -55,7 +67,7 @@ const Contact = () => {
             >
                 <h2 className="text-4xl font-bold text-[#22577a] mb-3">Get In Touch</h2>
 
-                <form ref={form} onSubmit={sendEmail} className="w-full max-w-lg mx-auto bg-white p-6 shadow-sm shadow-gray-900 rounded-lg">
+                <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto bg-white p-6 shadow-sm shadow-gray-900 rounded-lg">
                     <input
                         type="text"
                         name="name"
@@ -95,9 +107,11 @@ const Contact = () => {
                     <motion.button
                         type="submit"
                         whileTap={{ scale: 0.95 }}
-                        className="bg-[#22577a] text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-[#08306b] transition-all duration-500 cursor-pointer"
+                        disabled={sending}
+                        className={`bg-[#22577a] text-white font-semibold py-2 px-6 rounded-md shadow-md transition-all duration-500 cursor-pointer ${sending ? "opacity-50 cursor-not-allowed" : "hover:bg-[#08306b]"
+                            }`}
                     >
-                        Send Message
+                        {sending ? "Sending..." : "Send Message"}
                     </motion.button>
                 </form>
             </motion.div>

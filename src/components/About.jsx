@@ -1,4 +1,4 @@
-import React from "react";
+// import from "react";
 import { motion } from "framer-motion";
 const About = () => {
     return (
@@ -6,8 +6,7 @@ const About = () => {
             <div className="container mx-auto px-6 md:px-12 lg:px-20">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-10">
 
-                    {/* About Content */}
-                    <div className="md:w-2/3">
+                    <div className="md:w-2/3 ">
                         <motion.div
                             initial={{ x: -100, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
@@ -26,7 +25,6 @@ const About = () => {
                         </motion.div>
                     </div>
 
-                    {/* Skills Section */}
                     <div className="md:w-1/3 w-full">
                         <motion.div
                             initial={{ x: 100, opacity: 0 }}
@@ -37,12 +35,12 @@ const About = () => {
                         >
                             <h4 className="text-4xl font-bold text-[#22577a] mb-4">Skills</h4>
                             <ul className="space-y-2 text-[#001524] font-semibold ">
-                                <li className="border-b border-gray-400 pb-2">Git, Github, Linux</li>
+                                <li className="border-b border-gray-400 pb-2">Git, Github, Linux, VS Code</li>
                                 <li className="border-b border-gray-400 pb-2">C, C++, DSA</li>
                                 <li className="border-b border-gray-400 pb-2">HTML, CSS, JavaScript</li>
                                 <li className="border-b border-gray-400 pb-2">Tailwind CSS, ReactJS</li>
                                 <li className="border-b border-gray-400 pb-2">ExpressJS, NodeJS</li>
-                                <li className="border-b border-gray-400 pb-2">MongoDB, NoSQL</li>
+                                <li className="border-b border-gray-400 pb-2">MongoDB, Postman</li>
                             </ul>
                         </motion.div>
                     </div>
@@ -53,4 +51,3 @@ const About = () => {
 };
 
 export default About;
-
