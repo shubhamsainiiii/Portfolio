@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
-import ShubhamResume from "../assets/resume/ShubhamResume.pdf";
+import ShubhamCV from "../assets/resume/ShubhamCV.pdf";
 import shubhamCopy from '../assets/images/shubhamCopy.jpg'
 
 const Hero = () => {
@@ -47,7 +47,7 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href={ShubhamResume} className="bg-[#22577a] font-semibold text-[18px] text-white px-6 py-2 rounded-md hover:bg-[#08306b] transition duration-300">
+                    <a href={ShubhamCV} className="bg-[#22577a] font-semibold text-[18px] text-white px-6 py-2 rounded-md hover:bg-[#08306b] transition duration-300">
                         Download CV
                     </a>
                     <a href="mailto:shubhamthoi27@gmail.com" className="bg-gray-800 text-white px-6 py-2 rounded-md shadow-md hover:bg-gray-900 font-semibold text-[18px] transition duration-300">
