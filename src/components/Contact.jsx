@@ -29,10 +29,10 @@ const Contact = () => {
         };
 
         emailjs.send(
-            "service_59a6iwq",          // emailjs service ID
-            "template_ngwwcrl",         // emailjs template ID
+            "service_59a6iwq",
+            "template_ngwwcrl",
             formfield,
-            "UctGOMpY5pnxSU-7d"         // emailjs public key
+            "UctGOMpY5pnxSU-7d"
         ).then(() => {
             Swal.fire({
                 title: "Success!",

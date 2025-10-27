@@ -26,7 +26,7 @@ const educationData = [
     {
         title: "Full-Stack Web Development",
         institute: "Regex Software Services, Jaipur (Rajasthan)",
-        year: "2024-2025",
+        year: "Jan 2025- July 2025",
     },
 ];
 

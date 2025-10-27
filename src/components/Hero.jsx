@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
-import shubhamCV from "../assets/resume/shubhamCV.pdf";
+import shubhamCV from "../assets/resume/ShubhamResume.pdf";
 import shubhamCopy from '../assets/images/shubhamCopy.jpg'
 
 const Hero = () => {
@@ -57,22 +57,22 @@ const Hero = () => {
 
 
                 <div className="flex justify-center md:justify-start mt-6 space-x-4">
-                    <a href="mailto:shubhamthoi27@gmail.com" className="text-gray-800 text-2xl hover:scale-110    transition duration-400">
+                    <a href="mailto:shubhamsainiiii27@gmail.com" className="text-gray-800 text-2xl hover:scale-110    transition duration-400">
                         <FaEnvelope className="hover:text-gray-900" />
                     </a>
-                    <a href="tel:7691888950" className="text-gray-800 text-2xl hover:scale-110 transition duration-400">
+                    <a href="tel:7691888950" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaPhoneAlt className="hover:text-gray-900" />
                     </a>
-                    <a href="https://www.linkedin.com/in/shubham-saini-326727220" className="text-gray-800 text-2xl hover:scale-110 transition duration-400">
+                    <a href="https://www.linkedin.com/in/shubhamsaini27/" className="text-gray-800 text-2xl hover:scale-110 transitio-alln duration5400">
                         <FaLinkedin className="hover:text-gray-900" />
                     </a>
-                    <a href="https://wa.me/7691888950" target="_blank" rel="noopener noreferrer" className="text-gray-800 text-2xl hover:scale-110 transition duration-400">
+                    <a href="https://wa.me/7691888950" target="_blank" rel="noopener noreferrer" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaWhatsapp className="hover:text-gray-900" />
                     </a>
-                    <a href="https://instagram.com/shubhamsainiiiiii" className="text-gray-800 text-2xl hover:scale-110 transition duration-400">
+                    <a href="https://instagram.com/shubhamsainiiiiii" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaInstagram className="hover:text-gray-900" />
                     </a>
-                    <a href="https://github.com/shubhamsainiiii" className="text-gray-800 text-2xl hover:scale-110 transition duration-400">
+                    <a href="https://github.com/shubhamsainiiii" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaGithub className="hover:text-gray-900" />
                     </a>
                 </div>
