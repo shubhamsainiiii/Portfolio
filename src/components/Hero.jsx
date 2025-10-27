@@ -4,6 +4,9 @@ import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import shubhamCV from "../assets/resume/ShubhamResume.pdf";
 import shubhamCopy from '../assets/images/shubhamCopy.jpg'
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 
 const Hero = () => {
     return (
@@ -14,10 +17,12 @@ const Hero = () => {
                 transition={{ duration: 2 }}
                 viewport={{ once: false }}
                 className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-900">
-                <img
+                <LazyLoadImage
                     src={shubhamCopy}
                     alt="Profile"
-                    className="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-700"
+                    effect="blur"
+                    wrapperProps={{ style: { transitionDelay: "1s" } }}
+                    className="w-full h-full object-cover cursor-pointer transition-transform duration-[1200ms] ease-in-out group-hover:scale-110"
                 />
             </motion.div>
 
@@ -82,3 +87,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
