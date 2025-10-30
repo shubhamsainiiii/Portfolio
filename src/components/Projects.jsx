@@ -1,47 +1,71 @@
 import { motion } from "framer-motion";
 import { FaUtensils, FaDesktop, FaTools } from "react-icons/fa";
-import a2z from '../assets/images/a2z.png';
-import Hero from '../assets/Screenshots/Hero.png'
-import food from '../assets/images/food.png'
+import a2z from "../assets/images/a2z.png";
+import Hero from "../assets/Screenshots/Hero.png";
+import food from "../assets/images/food.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
-
 
 const projects = [
     {
         title: "A2Z Mechanical Service",
-        description: "A fully responsive and interactive machine repairing service website built using ReactJS",
+        description:
+            "A fully responsive and interactive machine repairing service website built using ReactJS",
         icon: <FaTools className="text-4xl text-white" />,
         link: "https://a2zmechanicalservice.com",
         code: "https://github.com/shubhamsainiiii/a2z-service",
-        image: a2z
+        image: a2z,
     },
     {
         title: "DishKart - A Food Delivery Application",
-        description: "A full-stack MERN app for booking doctor appointments online with secure authentication.",
+        description:
+            "A full-stack MERN app for booking doctor appointments online with secure authentication.",
         icon: <FaUtensils className="text-4xl text-white" />,
         link: "https://dishkart.com",
         code: "https://github.com/shubhamsainiiii/Food-Delivery-App/tree/main/Food_Delivery_Application/Food_Delivery_Application_System",
-        image: food
+        image: food,
     },
     {
         title: "Portfolio Website",
-        description: "A personal portfolio built with ReactJS showcasing projects and skills.",
+        description:
+            "A personal portfolio built with ReactJS showcasing projects and skills.",
         icon: <FaDesktop className="text-4xl text-white" />,
         link: "https://shubhaminnovates.netlify.app/",
         code: "https://github.com/shubhamsainiiii/Portfolio",
-        image: Hero
+        image: Hero,
     },
 ];
 
+const containerVariants = {
+    hidden: { opacity: 1 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            delayChildren: 0.2,
+        },
+    },
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 100 },
+    show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.6,
+            ease: "easeOut",
+        },
+    },
+};
+
 const Projects = () => {
     return (
-        <section id="projects" className="py-16 mt-30 font-primary">
+        <section id="projects" className="py-16 mt-30 font-primary bg-white">
             <motion.div
-                initial={{ scale: 0.7, opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.6 }}
+                transition={{ duration: 1 }}
                 viewport={{ once: false }}
                 className="text-center"
             >
@@ -50,12 +74,18 @@ const Projects = () => {
                     <p className="text-gray-900 font-semibold text-lg mt-2">
                         Discover my projects, where creativity meets innovation
                     </p>
-
-                    <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <motion.div
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: false, amount: 0.2 }}
+                        className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+                    >
                         {projects.map((project, index) => (
-                            <div
+                            <motion.div
                                 key={index}
-                                className="relative border border-[#001524] p-1 rounded-lg shadow-sm shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 text-center transition-all duration-300 hover:-translate-y-2"
+                                variants={cardVariants}
+                                className="relative border border-[#001524] p-1 rounded-lg shadow-sm shadow-gray-400 hover:shadow-lg text-center transition-all duration-300 hover:-translate-y-2 bg-white"
                             >
                                 <LazyLoadImage
                                     src={project.image}
@@ -68,8 +98,12 @@ const Projects = () => {
                                 <div className="w-16 h-16 mx-auto bg-[#22577a] flex items-center justify-center rounded-full mb-4">
                                     {project.icon}
                                 </div>
-                                <h4 className="text-xl text-gray-900 font-semibold mb-2">{project.title}</h4>
-                                <p className="text-gray-900 text-lg font-medium mb-4 text-justify p-2">{project.description}</p>
+                                <h4 className="text-xl text-gray-900 font-semibold mb-2">
+                                    {project.title}
+                                </h4>
+                                <p className="text-gray-900 text-lg font-medium mb-4 text-justify p-2">
+                                    {project.description}
+                                </p>
                                 <div className="flex justify-center gap-6 pb-4 relative">
                                     <a
                                         href={project.link}
@@ -89,9 +123,9 @@ const Projects = () => {
                                         View Code
                                     </a>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </motion.div>
         </section>
