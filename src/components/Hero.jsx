@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import shubhamCV from "../assets/resume/ShubhamResume.pdf";
-import shubhamCopy from '../assets/images/shubhamCopy.jpg'
+import Heroimg from '../assets/images/Heroimg.jpg'
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -16,13 +16,13 @@ const Hero = () => {
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 2 }}
                 viewport={{ once: false }}
-                className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-900">
+                className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-gray-900 relative">
                 <LazyLoadImage
-                    src={shubhamCopy}
+                    src={Heroimg}
                     alt="Profile"
                     effect="blur"
                     wrapperProps={{ style: { transitionDelay: "1s" } }}
-                    className="w-full h-full object-cover cursor-pointer transition-transform duration-[1200ms] ease-in-out group-hover:scale-110"
+                    className="w-full h-full object-cover cursor-pointer transition-all duration-600  hover:scale-105"
                 />
             </motion.div>
 
@@ -35,7 +35,7 @@ const Hero = () => {
             >
                 <h3 className="font-bold text-gray-900">Hi, My Name is</h3>
 
-                <h1 className="text-4xl md:text-4xl font-bold text-[#22577a]">
+                <h1 className="text-4xl md:text-4xl font-bold bg-gradient-to-tr from-[#08306b] via-[#307fb4] to-[#22577a] bg-clip-text text-transparent">
                     <TypeAnimation
                         sequence={["Shubham and i am ", 1000,
                             "a Web Developer...!", 1000,
@@ -51,8 +51,8 @@ const Hero = () => {
                     Welcome to my portfolio website! I am a passionate and aspiring web developer with a strong desire to create innovative solutions and push the boundaries of technology.
                 </p>
 
-                <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href={shubhamCV} className="bg-[#22577a] font-semibold text-[18px] text-white px-6 py-2 rounded-md hover:bg-[#08306b] transition duration-300">
+                <div className="flex flex-col sm:flex-row justify-center md:justify-start mt-6 space-y-3 sm:space-y-0 sm:space-x-4 relative">
+                    <a href={shubhamCV} className="bg-[#22577a] font-semibold text-[18px] text-white px-6 py-2 rounded-md hover:bg-[#08306b] transition-all duration-300">
                         Download CV
                     </a>
                     <a href="mailto:shubhamthoi27@gmail.com" className="bg-gray-800 text-white px-6 py-2 rounded-md shadow-md hover:bg-gray-900 font-semibold text-[18px] transition duration-300">
@@ -61,14 +61,14 @@ const Hero = () => {
                 </div>
 
 
-                <div className="flex justify-center md:justify-start mt-6 space-x-4">
+                <div className="flex justify-center md:justify-start mt-6 space-x-4 relative">
                     <a href="mailto:shubhamsainiiii27@gmail.com" className="text-gray-800 text-2xl hover:scale-110    transition duration-400">
                         <FaEnvelope className="hover:text-gray-900" />
                     </a>
                     <a href="tel:7691888950" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaPhoneAlt className="hover:text-gray-900" />
                     </a>
-                    <a href="https://www.linkedin.com/in/shubhamsaini27/" className="text-gray-800 text-2xl hover:scale-110 transitio-alln duration5400">
+                    <a href="https://www.linkedin.com/in/shubhamsaini27/" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">
                         <FaLinkedin className="hover:text-gray-900" />
                     </a>
                     <a href="https://wa.me/7691888950" target="_blank" rel="noopener noreferrer" className="text-gray-800 text-2xl hover:scale-110 transition-all duration-500">

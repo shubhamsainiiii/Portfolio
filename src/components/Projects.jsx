@@ -55,14 +55,14 @@ const Projects = () => {
                         {projects.map((project, index) => (
                             <div
                                 key={index}
-                                className="relative border border-[#001524] p-1 rounded-lg shadow-sm shadow-gray-400 hover:shadow-md text-center transition-all duration-300 hover:-translate-y-2"
+                                className="relative border border-[#001524] p-1 rounded-lg shadow-sm shadow-gray-400 hover:shadow-lg hover:shadow-gray-500 text-center transition-all duration-300 hover:-translate-y-2"
                             >
                                 <LazyLoadImage
                                     src={project.image}
                                     alt={project.title}
                                     effect="blur"
                                     wrapperProps={{ style: { transitionDelay: "1s" } }}
-                                    className="w-full h-56 object-contain rounded-t-lg mb-4"
+                                    className="w-full h-48 object-fill rounded-t-lg mb-4"
                                 />
                                 <div className="w-full h-[1px] bg-[#22577a] my-4 rounded-full"></div>
                                 <div className="w-16 h-16 mx-auto bg-[#22577a] flex items-center justify-center rounded-full mb-4">

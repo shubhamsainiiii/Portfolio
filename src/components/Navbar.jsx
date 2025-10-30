@@ -36,7 +36,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-[#22577a] bg-cerulean text-white shadow-sm shadow-gray-900" : "bg-white text-[#22577a] shadow-sm shadow-gray-400 "}`}>
+        <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-gradient-to-tr from-[#0f489f] via-[#3f89bb] to-[#1a4867] text-white shadow-sm shadow-gray-900" : "bg-white text-[#22577a] shadow-sm shadow-gray-400 "}`}>
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <a href="/" className="text-2xl font-bold" onClick={(e) => {
                     e.preventDefault();
@@ -63,7 +63,7 @@ const Navbar = () => {
             </nav>
             {/* ----------------mobile-------------- */}
             {isOpen && (
-                <ul className={`md:hidden flex flex-col items-center font-bold bg-[#22577a] w-1/2 max-w-sm mx-auto py-4 absolute top-16 right-1/4 transform translate-x-1/2 shadow-xl shadow-gray-500-lg ${isScrolled ? "bg-[#22577a] text-white shadow-lg" : "bg-white text-[#22577a]"}`}>
+                <ul className={`md:hidden flex flex-col items-center font-bold bg-[#22577a] w-1/2 max-w-sm mx-auto py-4 absolute top-16 right-1/4 transform translate-x-1/2 shadow-xl shadow-gray-500-lg ${isScrolled ? "bg-gradient-to-tl from-[#0f489f] via-[#3f89bb] to-[#1a4867] text-white shadow-lg" : "bg-white text-[#22577a]"}`}>
                     {["Home", "About", "Education", "Projects", "Achievement", "Contact"].map((item) => (
                         <li key={item} className={`py-2 w-full text-center ${isScrolled ? "active:bg-white active:text-[#22577a]" : "active:bg-[#22577a] active:text-white"}`} >
                             <a href={`#${item.toLowerCase()}`} onClick={(e) => {
