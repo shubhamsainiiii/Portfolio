@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import shubhamCV from "../assets/resume/ShubhamResume.pdf";
-import Heroimg from '../assets/images/Heroimg.jpg'
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import Heroimg from '../assets/images/Heroimg.jpg'
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 
