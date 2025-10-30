@@ -4,7 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FaInstagram, FaEnvelope, FaPhoneAlt, FaLinkedin, FaWhatsapp, FaGithub } from "react-icons/fa";
 import shubhamCV from "../assets/resume/ShubhamResume.pdf";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Heroimg from '../assets/images/Heroimg.jpg'
+import Heroimg from '../assets/images/Heroimg.JPG'
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 
