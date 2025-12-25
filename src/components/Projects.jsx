@@ -112,7 +112,7 @@ const Projects = () => {
                                         href={project.code}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center py-2 rounded-lg border border-[#22577a] text-[#22577a] font-semibold hover:bg-[#eef3ff] transition"
+                                        className="flex-1 text-center py-2 rounded-lg border border-[#22577a] text-[#22577a] font-semibold hover:bg-[#eef3ff] transition-all duration-500"
                                     >
                                         Code
                                     </a>
@@ -121,7 +121,7 @@ const Projects = () => {
                                         href={project.link}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex-1 text-center py-2 rounded-lg bg-[#1055C9] text-white font-semibold hover:bg-blue-500 transition"
+                                        className="flex-1 text-center py-2 rounded-lg bg-[#1055C9] text-white font-semibold hover:bg-blue-500 transition-all duration-500"
                                     >
                                         Live View
                                     </a>

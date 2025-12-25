@@ -186,12 +186,12 @@ const Hero = () => {
                 </p>
 
                 <div className="mt-10">
-                    <a
-                        href="/about"
+                    <Link
+                        to="/about"
                         className="bg-[#1055C9] hover:bg-blue-500 inline-block text-white px-8 py-3 rounded-md font-semibold transition-all duration-500"
                     >
                         Explore More About Me
-                    </a>
+                    </Link>
                 </div>
             </motion.div>
 
@@ -265,12 +265,12 @@ const Hero = () => {
                     viewport={{ once: false }}
                     className="text-center mt-14"
                 >
-                    <a
-                        href="/services"
+                    <Link
+                        to="/services"
                         className="bg-[#1055C9] hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition-all duration-500"
                     >
                         Explore My Services
-                    </a>
+                    </Link>
                 </motion.div>
             </motion.div>
         </div>
