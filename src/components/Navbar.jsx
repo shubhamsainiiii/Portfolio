@@ -1,80 +1,126 @@
-import { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
+import { Divide as Hamburger } from "hamburger-react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
-    const handleMenuClick = (section) => {
-        setIsOpen(false);
+    const menuItems = [
+        { name: "home", path: "/" },
+        { name: "about", path: "/about" },
+        { name: "services", path: "/services" },
+        { name: "projects", path: "/projects" },
+        { name: "contact", path: "/contact" },
+    ];
 
-        const element = document.getElementById(section.toLowerCase());
-
-        if (element) {
-            const navbarHeight = 45;
-            const position = element.offsetTop - navbarHeight;
+    // 🔥 Handles SAME PAGE click + mobile close
+    const handleNavClick = (path) => {
+        if (location.pathname === path) {
             window.scrollTo({
-                top: position,
-                behavior: "smooth"
+                top: 0,
+                behavior: "smooth",
             });
         }
+        setIsOpen(false);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     return (
-        <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? "bg-gradient-to-tr from-[#0f489f] via-[#3f89bb] to-[#1a4867] text-white shadow-sm shadow-gray-900" : "bg-white text-[#22577a] shadow-sm shadow-gray-400 "}`}>
-            <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="/" className="text-2xl font-bold" onClick={(e) => {
-                    e.preventDefault();
-                    handleMenuClick("home");
-                }}>SHUBHAM</a>
+        <>
+            {/* ================= HEADER ================= */}
+            <header className="fixed top-0 w-full z-50 bg-white/0 backdrop-blur-md shadow">
+                <nav className="flex justify-between items-center px-6 py-3">
+                    {/* LOGO */}
+                    <Link
+                        to="/"
+                        onClick={() => handleNavClick("/")}
+                        className="cursor-pointer flex items-center"
+                    >
+                        <img
+                            src={logo}
+                            alt="Shubham Logo"
+                            className="h-12 w-12 object-contain"
+                        />
+                    </Link>
 
-                <ul className="hidden md:flex space-x-6 font-semibold">
-                    {["Home", "About", "Education", "Projects", "Contact"].map((item) => (
-                        <li key={item} className="transition-transform duration-300 hover:scale-110">
-                            <a href={`#${item.toLowerCase()}`} onClick={(e) => {
-                                e.preventDefault();
-                                handleMenuClick(item);
-                            }}>
-                                {item}
-                            </a>
-                        </li>
-                    ))}
+                    {/* DESKTOP MENU */}
+                    <ul className="hidden md:flex gap-6 font-semibold text-[#1055C9]">
+                        {menuItems.map((item) => {
+                            const isActive = location.pathname === item.path;
+
+                            return (
+                                <li key={item.name} className="relative group">
+                                    <Link
+                                        to={item.path}
+                                        onClick={() => handleNavClick(item.path)}
+                                        className={`cursor-pointer transition-colors duration-300 hover:text-[#1b4895] ${isActive ? "text-[#1055C9]" : ""
+                                            }`}
+                                    >
+                                        {item.name.toUpperCase()}
+                                    </Link>
+
+                                    {/* UNDERLINE */}
+                                    <span
+                                        className={`absolute left-0 -bottom-1 h-[2px] bg-[#1055C9] transition-all duration-300 ${isActive
+                                            ? "w-full"
+                                            : "w-0 group-hover:w-full"
+                                            }`}
+                                    />
+                                </li>
+                            );
+                        })}
+                    </ul>
+
+                    {/* HAMBURGER */}
+                    <div className="md:hidden cursor-pointer">
+                        <Hamburger
+                            toggled={isOpen}
+                            toggle={setIsOpen}
+                            size={22}
+                            duration={0.5}
+                            easing="ease-in-out"
+                            color="#1055C9"
+                            rounded
+                        />
+                    </div>
+                </nav>
+            </header>
+
+            {/* ================= MOBILE MENU ================= */}
+            <div
+                className={`fixed inset-0 z-40 md:hidden backdrop-blur-xl bg-white/40 transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+                    }`}
+            >
+                <ul className="h-full flex flex-col justify-center items-center gap-8 text-2xl font-medium text-[#1055C9]">
+                    {menuItems.map((item, i) => {
+                        const isActive = location.pathname === item.path;
+
+                        return (
+                            <li
+                                key={item.name}
+                                style={{ transitionDelay: `${i * 120}ms` }}
+                                className={`transition-all duration-500 ease-out ${isOpen
+                                    ? "translate-x-0 opacity-100"
+                                    : "translate-x-16 opacity-0"
+                                    }`}
+                            >
+                                <Link
+                                    to={item.path}
+                                    onClick={() => handleNavClick(item.path)}
+                                    className={`tracking-wide cursor-pointer transition-all hover:scale-105 ${isActive
+                                        ? "underline text-[#1055C9]"
+                                        : ""
+                                        }`}
+                                >
+                                    {item.name.toUpperCase()}
+                                </Link>
+                            </li>
+                        );
+                    })}
                 </ul>
-                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
-                    {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-                </button>
-            </nav>
-            {/* ----------------mobile-------------- */}
-            {isOpen && (
-                <ul className={`md:hidden flex flex-col items-center font-bold bg-[#22577a] w-1/2 max-w-sm mx-auto py-4 absolute top-16 right-1/4 transform translate-x-1/2 shadow-xl shadow-gray-500-lg ${isScrolled ? "bg-gradient-to-tl from-[#0f489f] via-[#3f89bb] to-[#1a4867] text-white shadow-lg" : "bg-white text-[#22577a]"}`}>
-                    {["Home", "About", "Education", "Projects", "Contact"].map((item) => (
-                        <li key={item} className={`py-2 w-full text-center ${isScrolled ? "active:bg-white active:text-[#22577a]" : "active:bg-[#22577a] active:text-white"}`} >
-                            <a href={`#${item.toLowerCase()}`} onClick={(e) => {
-                                e.preventDefault();
-                                handleMenuClick(item);
-                            }}>
-                                {item}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </header>
+            </div>
+        </>
     );
 };
 

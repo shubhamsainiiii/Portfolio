@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { FaUtensils, FaDesktop, FaTools } from "react-icons/fa";
 import a2z from "../assets/images/a2z.png";
 import Hero from "../assets/Screenshots/Hero.png";
 import food from "../assets/images/food.png";
@@ -10,124 +9,128 @@ const projects = [
     {
         title: "A2Z Mechanical Service",
         description:
-            "A fully responsive and interactive machine repairing service website built using ReactJS",
-        icon: <FaTools className="text-4xl text-white" />,
+            "A fully responsive and interactive machine repairing service website built using ReactJS.",
+        image: a2z,
+        tech: ["React", "TailwindCSS"],
         link: "https://a2zmechanicalservice.com",
         code: "https://github.com/shubhamsainiiii/a2z-service",
-        image: a2z,
     },
     {
-        title: "DishKart - A Food Delivery Application",
+        title: "DishKart – Food Delivery App",
         description:
-            "A full-stack MERN app for booking doctor appointments online with secure authentication.",
-        icon: <FaUtensils className="text-4xl text-white" />,
-        link: "https://dishkart.com",
-        code: "https://github.com/shubhamsainiiii/Food-Delivery-App/tree/main/Food_Delivery_Application/Food_Delivery_Application_System",
+            "A full-stack MERN food delivery application with authentication, cart, and order system.",
         image: food,
+        tech: ["Reactjs", "Nodejs", "MongoDB"],
+        link: "",
+        code: "https://github.com/shubhamsainiiii/Food-Delivery-App",
     },
     {
         title: "Portfolio Website",
         description:
-            "A personal portfolio built with ReactJS showcasing projects and skills.",
-        icon: <FaDesktop className="text-4xl text-white" />,
+            "Personal portfolio built with ReactJS showcasing projects, skills, and experience.",
+        image: Hero,
+        tech: ["React", "TailwindCSS"],
         link: "https://shubhaminnovates.netlify.app/",
         code: "https://github.com/shubhamsainiiii/Portfolio",
-        image: Hero,
     },
 ];
 
-const containerVariants = {
-    hidden: { opacity: 1 },
-    show: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.5,
-            delayChildren: 0.2,
-        },
-    },
-};
-
 const cardVariants = {
-    hidden: { opacity: 0, y: 100 },
+    hidden: { opacity: 0, y: 80 },
     show: {
         opacity: 1,
         y: 0,
-        transition: {
-            duration: 0.6,
-            ease: "easeOut",
-        },
+        transition: { duration: 0.6, ease: "easeOut" },
     },
 };
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-16 mt-30 font-primary bg-white">
-            <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: false }}
-                className="text-center"
-            >
-                <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
-                    <h3 className="text-4xl font-bold text-[#22577a]">MY PROJECTS</h3>
-                    <p className="text-gray-900 font-semibold text-lg mt-2">
+        <section id="projects" className="py-20 bg-[#f5f9ff]">
+            <div className="container mx-auto px-6 md:px-12 lg:px-20 font-primary">
+                {/* Heading */}
+                <motion.div
+                    initial={{ opacity: 0, y: -30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-center mb-16"
+                >
+                    <h3 className="text-4xl md:text-5xl font-bold text-[#1055C9]">
+                        My Projects
+                    </h3>
+                    <p className="text-gray-600 text-lg mt-2">
                         Discover my projects, where creativity meets innovation
                     </p>
-                    <motion.div
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="show"
-                        viewport={{ once: false, amount: 0.2 }}
-                        className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-                    >
-                        {projects.map((project, index) => (
-                            <motion.div
-                                key={index}
-                                variants={cardVariants}
-                                className="relative border border-[#001524] p-1 rounded-lg shadow-sm shadow-gray-400 hover:shadow-lg text-center transition-all duration-300 hover:-translate-y-2 bg-white"
-                            >
-                                <LazyLoadImage
-                                    src={project.image}
-                                    alt={project.title}
-                                    effect="blur"
-                                    wrapperProps={{ style: { transitionDelay: "1s" } }}
-                                    className="w-full h-48 object-fill rounded-t-lg mb-4"
-                                />
-                                <div className="w-full h-[1px] bg-[#22577a] my-4 rounded-full"></div>
-                                <div className="w-16 h-16 mx-auto bg-[#22577a] flex items-center justify-center rounded-full mb-4">
-                                    {project.icon}
-                                </div>
-                                <h4 className="text-xl text-gray-900 font-semibold mb-2">
+                </motion.div>
+
+                {/* Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                    {projects.map((project, index) => (
+                        <motion.div
+                            key={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            whileHover={{ y: -8 }}
+                            className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden shadow-gray-400"
+                        >
+                            {/* Image */}
+                            <LazyLoadImage
+                                src={project.image}
+                                alt={project.title}
+                                effect="blur"
+                                wrapperProps={{ style: { transitionDelay: "1s" } }}
+                                className="w-full h-56 object-cover"
+                            />
+
+                            {/* Content */}
+                            <div className="p-6">
+                                <h4 className="text-xl font-bold text-gray-900 mb-2">
                                     {project.title}
                                 </h4>
-                                <p className="text-gray-900 text-lg font-medium mb-4 text-justify p-2">
+
+                                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                                     {project.description}
                                 </p>
-                                <div className="flex justify-center gap-6 pb-4 relative">
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label={`View details of ${project.title}`}
-                                        className="relative z-10 text-[#22577a] font-bold transition-all duration-200 hover:text-[#08306b]"
-                                    >
-                                        Click Here
-                                    </a>
+
+                                {/* Tech Stack */}
+                                <div className="flex flex-wrap gap-2 mb-6">
+                                    {project.tech.map((item, i) => (
+                                        <span
+                                            key={i}
+                                            className="px-3 py-1 rounded-md bg-[#eef3ff] text-[#22577a] text-sm font-medium"
+                                        >
+                                            {item}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Buttons */}
+                                <div className="flex gap-4">
                                     <a
                                         href={project.code}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="relative z-10 text-[#22577a] font-bold transition-all duration-200 hover:text-[#08306b]"
+                                        className="flex-1 text-center py-2 rounded-lg border border-[#22577a] text-[#22577a] font-semibold hover:bg-[#eef3ff] transition"
                                     >
-                                        View Code
+                                        Code
+                                    </a>
+
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex-1 text-center py-2 rounded-lg bg-[#1055C9] text-white font-semibold hover:bg-blue-500 transition"
+                                    >
+                                        Live View
                                     </a>
                                 </div>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 };

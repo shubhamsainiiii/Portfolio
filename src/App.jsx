@@ -1,26 +1,34 @@
-// import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
+import About from './components/About';
+import Projects from './components/Projects';
 import Contact from "./components/Contact";
-import Education from "./components/Education ";
-import AnimatedBackground from './components/AnimatedBackground';
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Services from "./components/Services";
+
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden">
-      <AnimatedBackground />
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Projects />
-      <Contact />
-      <p className="text-sm text-gray-900 mb-6 font-semibold text-center font-primary">&copy; {new Date().getFullYear()} shubhaminnovates. All Rights Reserved.</p>
-    </div>
+    <Router>
+      <div className="overflow-x-hidden font-primary">
+        <ScrollToTop />
+        <Navbar />
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={<Hero />} />
+
+          {/* Optional: separate pages */}
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
 export default App;
-
