@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import a2z from "../assets/images/a2z.png";
 import Hero from "../assets/Screenshots/Hero.png";
 import food from "../assets/images/food.png";
+import kcrental from "../assets/images/kcrental.png";
+import mightvayu from "../assets/images/mightvayu.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -32,6 +34,24 @@ const projects = [
         tech: ["React", "TailwindCSS"],
         link: "https://shubhaminnovates.netlify.app/",
         code: "https://github.com/shubhamsainiiii/Portfolio",
+    },
+    {
+        title: "KC Rental Services",
+        description:
+            "A modern rental and retail service platform offering a wide range of garments and jewelry for both rent and purchase. Designed with a clean, user-friendly interface, the website delivers a smooth browsing experience while showcasing products with clarity, style, and ease.",
+        image: kcrental,
+        tech: ["React", "NodeJs", "ExpressJs", "MongoDB"],
+        link: "https://kcrental-frontend-code.vercel.app",
+        code: "https://github.com/shubhamsainiiii/KCRENTAL_BACKEND_CODE",
+    },
+    {
+        title: "MightVayu Technical Services",
+        description:
+            "MightVayu Technical Services delivers innovative design, fabrication, and build solutions across exhibitions, events, and technical installations. We create high-quality temporary and permanent indoor and outdoor structures with a focus on safety, precision, and cost efficiency.",
+        image: mightvayu,
+        tech: ["React", "TailwindCSS", "Framer Motion"],
+        link: "https://mightyvayu.vercel.app",
+        code: "https://github.com/shubhamsainiiii/MIGHTYVAYU",
     },
 ];
 
