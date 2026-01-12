@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
+import Testimonials from "./components/Testimonials";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           {/* Optional: separate pages */}
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
