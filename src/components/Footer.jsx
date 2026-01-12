@@ -65,7 +65,7 @@ const Footer = () => {
 
             {/* BOTTOM COPYRIGHT */}
             <div className="mt-14 border-t border-gray-200 py-6 text-center text-gray-600 text-sm md:text-base">
-                © 2025 shubhaminnovates — All rights reserved.
+               &copy; {new Date().getFullYear()} shubhaminnovates — All rights reserved.
             </div>
 
             {/* SCROLL TO TOP */}
