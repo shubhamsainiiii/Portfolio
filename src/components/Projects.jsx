@@ -50,7 +50,7 @@ const projects = [
             "MightVayu Technical Services delivers innovative design, fabrication, and build solutions across exhibitions, events, and technical installations. We create high-quality temporary and permanent indoor and outdoor structures with a focus on safety, precision, and cost efficiency.",
         image: mightvayu,
         tech: ["React", "TailwindCSS", "Framer Motion"],
-        link: "https://mightyvayu.vercel.app",
+        link: "https://www.mtsexb.com/",
         code: "https://github.com/shubhamsainiiii/MIGHTYVAYU",
     },
 ];
