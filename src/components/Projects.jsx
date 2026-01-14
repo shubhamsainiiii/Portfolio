@@ -32,7 +32,7 @@ const projects = [
             "Personal portfolio built with ReactJS showcasing projects, skills, and experience.",
         image: Hero,
         tech: ["React", "TailwindCSS"],
-        link: "www.shubhaminnovates.cloud",
+        link: "https://www.shubhaminnovates.cloud",
         code: "https://github.com/shubhamsainiiii/Portfolio",
     },
     {
