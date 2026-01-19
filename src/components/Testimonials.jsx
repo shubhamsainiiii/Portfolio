@@ -25,17 +25,26 @@ const testimonials = [
 const Testimonials = () => {
     return (
         <section id="testimonials" className="py-20 bg-[#f5f9ff] min-h-screen">
-            <div className="container mx-auto px-6 md:px-12 lg:px-20 pt-16">
+            <div className="container mx-auto px-6 md:px-12 lg:px-20">
 
                 {/* Heading */}
                 <motion.h2
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-3xl md:text-4xl font-bold text-center text-[#1055C9] mb-16"
+                    className="text-4xl md:text-5xl font-bold text-[#1055C9] text-center mb-4"
                 >
                     What People Say
                 </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="text-center text-gray-500 max-w-2xl mx-auto mb-16 leading-relaxed">
+                    Real feedback from people I’ve worked with, reflecting my skills,
+                    professionalism, and dedication to delivering quality solutions.
+                </motion.p>
+
 
                 {/* Testimonials Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -51,7 +60,7 @@ const Testimonials = () => {
                             <FaQuoteLeft className="text-4xl text-blue-100 mb-6" />
 
                             <p className="text-gray-600 italic mb-6 flex-grow leading-relaxed">
-                                "{testimonial.text}"
+                                &ldquo;{testimonial.text}&quot;
                             </p>
 
                             <div className="mt-auto">
@@ -59,7 +68,7 @@ const Testimonials = () => {
                                     {testimonial.name}
                                 </h3>
                                 <p className="text-sm text-gray-500 font-medium">
-                                    {testimonial.role} @ {testimonial.company}
+                                    {testimonial.role} @{testimonial.company}
                                 </p>
                             </div>
                         </motion.div>
@@ -67,7 +76,7 @@ const Testimonials = () => {
                 </div>
 
             </div>
-        </section>
+        </section >
     );
 };
 

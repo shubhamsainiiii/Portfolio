@@ -10,7 +10,7 @@ import {
     FaGithub,
     FaDatabase,
 } from "react-icons/fa";
-import { SiTailwindcss, SiPostgresql, SiExpress, SiMongodb, SiPostman } from "react-icons/si";
+import { SiTailwindcss, SiPostgresql, SiExpress, SiMongodb, SiPostman, SiGrafana, SiPrometheus } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 const cardBase =
     "flex items-center gap-3 rounded-2xl bg-white shadow-sm border border-slate-200 px-5 py-3 min-w-[220px] \
@@ -49,7 +49,7 @@ const About = () => {
                     initial={{ opacity: 0, y: -30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-4xl md:text-5xl font-bold text-center text-[#1055C9] mb-6 mt-6"
+                    className="text-4xl md:text-5xl font-bold text-center text-[#1055C9] mb-6 mt-4"
                 >
                     About Me
                 </motion.h2>
@@ -187,7 +187,15 @@ const About = () => {
                             </div>
                             <div className={cardBase}>
                                 <VscVscode className="text-2xl text-sky-600" />
-                                <span className="font-medium text-slate-700">Postman</span>
+                                <span className="font-medium text-slate-700">Visual studio Code</span>
+                            </div>
+                            <div className={cardBase}>
+                                <SiGrafana className="text-2xl text-[#F46800]" />
+                                <span className="font-medium text-slate-700">Grafana</span>
+                            </div>
+                            <div className={cardBase}>
+                                <SiPrometheus className="text-2xl text-[#E6522C]" />
+                                <span className="font-medium text-slate-700">Prometheus</span>
                             </div>
                         </div>
                     </div>

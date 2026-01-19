@@ -33,7 +33,7 @@ const Hero = () => {
                                     src={Heroimg}
                                     alt="Shubham"
                                     effect="blur"
-                                    className="w-full h-full object-cover rounded-full"
+                                    className="w-full h-full object-cover rounded-full cursor-pointer"
                                 />
                             </motion.div>
                         </div>
