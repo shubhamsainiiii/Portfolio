@@ -41,8 +41,7 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-center text-gray-500 max-w-2xl mx-auto mb-16 leading-relaxed">
-                    Real feedback from people I’ve worked with, reflecting my skills,
-                    professionalism, and dedication to delivering quality solutions.
+                    Words that reflect trust, collaboration, and real-world impact.
                 </motion.p>
 
 
