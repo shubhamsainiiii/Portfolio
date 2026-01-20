@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 import a2z from "../assets/images/a2z.png";
 import Hero from "../assets/Screenshots/Hero.png";
 import food from "../assets/images/food.png";
 import kcrental from "../assets/images/kcrental.png";
 import mightvayu from "../assets/images/mightvayu.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import universalrepair from "../assets/images/universal.png";
 
 const projects = [
     {
@@ -23,7 +25,7 @@ const projects = [
             "A full-stack MERN food delivery application with authentication, cart, and order system.",
         image: food,
         tech: ["Reactjs", "Nodejs", "MongoDB"],
-        link: "",
+        link: "https://github.com/shubhamsainiiii/Food-Delivery-App",
         code: "https://github.com/shubhamsainiiii/Food-Delivery-App",
     },
     {
@@ -53,6 +55,15 @@ const projects = [
         link: "https://www.mtsexb.com/",
         code: "https://github.com/shubhamsainiiii/MIGHTYVAYU",
     },
+    {
+        title: "Universal Repair Point",
+        description:
+            "Universal Repair Point is a professional repair service website providing reliable solutions for home appliances and electronic repairs with a clean, responsive, and user-friendly interface.",
+        image: universalrepair,
+        tech: ["React", "TailwindCSS", "Framer Motion"],
+        link: "https://universalrepairpoint.vercel.app",
+        code: "https://github.com/shubhamsainiiii/repairing_website",
+    },
 ];
 
 const cardVariants = {
@@ -68,6 +79,7 @@ const Projects = () => {
     return (
         <section id="projects" className="py-20 bg-[#f5f9ff]">
             <div className="container mx-auto px-6 md:px-12 lg:px-20 font-primary">
+
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: -30 }}
@@ -84,7 +96,7 @@ const Projects = () => {
                 </motion.div>
 
                 {/* Cards */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 items-stretch">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
@@ -93,19 +105,18 @@ const Projects = () => {
                             whileInView="show"
                             viewport={{ once: true }}
                             whileHover={{ y: -8 }}
-                            className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden shadow-gray-400"
+                            className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden shadow-gray-400 flex flex-col h-full"
                         >
                             {/* Image */}
                             <LazyLoadImage
                                 src={project.image}
                                 alt={project.title}
                                 effect="blur"
-                                wrapperProps={{ style: { transitionDelay: "1s" } }}
                                 className="w-full h-56 object-cover"
                             />
 
                             {/* Content */}
-                            <div className="p-6">
+                            <div className="p-6 flex flex-col flex-1">
                                 <h4 className="text-xl font-bold text-gray-900 mb-2">
                                     {project.title}
                                 </h4>
@@ -115,7 +126,7 @@ const Projects = () => {
                                 </p>
 
                                 {/* Tech Stack */}
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2 mb-6 items-start">
                                     {project.tech.map((item, i) => (
                                         <span
                                             key={i}
@@ -127,7 +138,7 @@ const Projects = () => {
                                 </div>
 
                                 {/* Buttons */}
-                                <div className="flex gap-4">
+                                <div className="flex gap-4 mt-auto">
                                     <a
                                         href={project.code}
                                         target="_blank"
@@ -138,10 +149,12 @@ const Projects = () => {
                                     </a>
 
                                     <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex-1 text-center py-2 rounded-lg bg-[#1055C9] text-white font-semibold hover:bg-blue-500 transition-all duration-500"
+                                        href={project.link || "#"}
+                                        onClick={(e) => !project.link && e.preventDefault()}
+                                        className={`flex-1 text-center py-2 rounded-lg font-semibold transition-all duration-500 ${project.link
+                                            ? "bg-[#1055C9] text-white hover:bg-blue-500"
+                                            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+                                            }`}
                                     >
                                         Live View
                                     </a>
@@ -151,7 +164,7 @@ const Projects = () => {
                     ))}
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
