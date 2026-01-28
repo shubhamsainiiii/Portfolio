@@ -20,6 +20,12 @@ const testimonials = [
         company: "MightVayu",
         text: "The technical expertise Shubham brought to our project was outstanding. He helped us build a robust solution that scales well. Highly recommended!",
     },
+    {
+        name: "Owner",
+        role: "Founder",
+        company: "Universal Repair Point",
+        text: "Shubham created a reliable and professional web solution for our repair services business. The platform is fast, clean, and perfectly aligned with our service needs.",
+    },
 ];
 
 const Testimonials = () => {

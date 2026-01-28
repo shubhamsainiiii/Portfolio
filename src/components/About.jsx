@@ -10,6 +10,8 @@ import {
     FaGithub,
     FaDatabase,
 } from "react-icons/fa";
+import { FaShoppingCart, FaBuilding, FaHome, FaHospital, FaUtensils, FaGraduationCap } from "react-icons/fa";
+
 import { SiTailwindcss, SiPostgresql, SiExpress, SiMongodb, SiPostman, SiGrafana, SiPrometheus } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 const cardBase =
@@ -200,6 +202,51 @@ const About = () => {
                         </div>
                     </div>
                 </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="mt-20"
+                >
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1055C9] mb-12 tracking-wide">
+                        Industries I Work With
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                        <div className={cardBase}>
+                            <FaShoppingCart className="text-2xl text-blue-600" />
+                            <span className="font-medium text-slate-700">E-Commerce Platforms</span>
+                        </div>
+
+                        <div className={cardBase}>
+                            <FaBuilding className="text-2xl text-indigo-600" />
+                            <span className="font-medium text-slate-700">Real Estate Solutions</span>
+                        </div>
+
+                        <div className={cardBase}>
+                            <FaHome className="text-2xl text-emerald-600" />
+                            <span className="font-medium text-slate-700">Rental & Property Management</span>
+                        </div>
+
+                        <div className={cardBase}>
+                            <FaUtensils className="text-2xl text-orange-500" />
+                            <span className="font-medium text-slate-700">Food Delivery & Restaurant Systems</span>
+                        </div>
+
+                        <div className={cardBase}>
+                            <FaHospital className="text-2xl text-red-500" />
+                            <span className="font-medium text-slate-700">Healthcare & Appointment Systems</span>
+                        </div>
+
+                        <div className={cardBase}>
+                            <FaGraduationCap className="text-2xl text-purple-600" />
+                            <span className="font-medium text-slate-700">Education & Learning Platforms</span>
+                        </div>
+                    </div>
+                </motion.div>
+
+
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}

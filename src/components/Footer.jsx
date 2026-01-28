@@ -65,11 +65,12 @@ const Footer = () => {
 
             {/* BOTTOM COPYRIGHT */}
             <div className="mt-14 border-t border-gray-200 py-6 text-center text-gray-600 text-sm md:text-base">
-               &copy; {new Date().getFullYear()} shubhaminnovates — All rights reserved.
+                &copy; {new Date().getFullYear()} shubhaminnovates — All rights reserved.
             </div>
 
             {/* SCROLL TO TOP */}
             <motion.button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} whileHover={{ scale: 1.1 }} className="fixed bottom-6 right-6 bg-[#1055C9] hover:bg-blue-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-500 animate-bounce" > <FaArrowUp className="text-lg md:text-xl" /> </motion.button>
+            <motion.button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} whileHover={{ scale: 1.1 }} className="fixed bottom-6 left-6 bg-green-400 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-500 animate-bounce" > <FaWhatsapp className="text-lg md:text-3xl" /> </motion.button>
         </footer>
     );
 };

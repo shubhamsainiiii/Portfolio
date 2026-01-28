@@ -266,10 +266,10 @@ const Hero = () => {
                     className="text-center mt-14"
                 >
                     <Link
-                        to="/services"
+                        to="/projects"
                         className="bg-[#1055C9] hover:bg-blue-500 text-white px-8 py-3 rounded-md font-semibold transition-all duration-500"
                     >
-                        Explore My Services
+                        Explore My Projects
                     </Link>
                 </motion.div>
             </motion.div>
