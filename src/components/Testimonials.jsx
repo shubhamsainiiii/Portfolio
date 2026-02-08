@@ -3,17 +3,18 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 const testimonials = [
     {
-        name: "Owner",
+        name: "Manish",
         role: "Director",
         company: "A2Z Mechanical Service",
         text: "Shubham delivered an excellent website for our mechanical services. The design is professional and the functionality is exactly what we needed to showcase our services.",
     },
     {
-        name: "Owner",
+        name: "Dheeraj",
         role: "Director",
-        company: "KC Rental",
-        text: "Great experience working with Shubham. He built a seamless rental platform for us that is easy to manage and user-friendly for our customers.",
+        company: "Tarkashi Jewelry",
+        text: "Excellent experience working with Shubham. He developed a professional jewelry website for our manufacturing and retail business that beautifully showcases our collections and makes it easy for customers to explore and purchase our products. Highly satisfied with the quality and support.",
     },
+
     {
         name: "Owner",
         role: "Director",
@@ -21,7 +22,7 @@ const testimonials = [
         text: "The technical expertise Shubham brought to our project was outstanding. He helped us build a robust solution that scales well. Highly recommended!",
     },
     {
-        name: "Owner",
+        name: "Ravikant",
         role: "Founder",
         company: "Universal Repair Point",
         text: "Shubham created a reliable and professional web solution for our repair services business. The platform is fast, clean, and perfectly aligned with our service needs.",

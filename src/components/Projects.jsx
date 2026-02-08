@@ -5,7 +5,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import a2z from "../assets/images/a2z.png";
 import Hero from "../assets/Screenshots/Hero.png";
 import food from "../assets/images/food.png";
-import kcrental from "../assets/images/kcrental.png";
+import kcrental from "../assets/images/tarkashi.png";
 import mightvayu from "../assets/images/mightvayu.png";
 import universalrepair from "../assets/images/universal.png";
 
@@ -38,12 +38,12 @@ const projects = [
         code: "https://github.com/shubhamsainiiii/Portfolio",
     },
     {
-        title: "KC Rental Services",
+        title: "Taarkashi Jewellers",
         description:
-            "A modern rental and retail service platform offering a wide range of garments and jewelry for both rent and purchase. Designed with a clean, user-friendly interface, the website delivers a smooth browsing experience while showcasing products with clarity, style, and ease.",
+            "A modern jewelry manufacturing and retail platform offering a wide range of handcrafted and elegant jewelry collections. Designed with a clean, user-friendly interface, the website delivers a smooth browsing experience while beautifully showcasing products with clarity, style, and luxury appeal.",
         image: kcrental,
         tech: ["React", "NodeJs", "ExpressJs", "MongoDB"],
-        link: "https://kcrental-frontend-code.vercel.app",
+        link: "https://tarkashi-jewellers-frontend.vercel.app/",
         code: "https://github.com/shubhamsainiiii/KCRENTAL_BACKEND_CODE",
     },
     {
