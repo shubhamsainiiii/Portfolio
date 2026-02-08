@@ -257,7 +257,7 @@ const About = () => {
                         Education
                     </h2>
 
-                    <div className="flex flex-col gap-8 max-w-4xl mx-auto">
+                    <div className="flex flex-col gap-8 max-w-4xl mx-auto sm:px-6">
                         <div className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300">
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                                 <div>
