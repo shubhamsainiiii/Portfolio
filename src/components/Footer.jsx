@@ -70,7 +70,18 @@ const Footer = () => {
 
             {/* SCROLL TO TOP */}
             <motion.button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} whileHover={{ scale: 1.1 }} className="fixed bottom-6 right-6 bg-[#1055C9] hover:bg-blue-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-500 animate-bounce" > <FaArrowUp className="text-lg md:text-xl" /> </motion.button>
-            <motion.button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} whileHover={{ scale: 1.1 }} className="fixed bottom-6 left-6 bg-green-400 hover:bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-500 animate-bounce" > <FaWhatsapp className="text-lg md:text-3xl" /> </motion.button>
+            <motion.button
+                onClick={() =>
+                    window.open(
+                        "https://wa.me/917691888950?text=Hello%20I%20want%20to%20enquire%20about%20your%20services",
+                        "_blank"
+                    )
+                }
+                whileHover={{ scale: 1.1 }}
+                className="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-500 animate-bounce"
+            >
+                <FaWhatsapp className="text-xl md:text-3xl" />
+            </motion.button>
         </footer>
     );
 };
