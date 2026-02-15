@@ -61,7 +61,11 @@ const projects = [
             "Universal Repair Point is a professional repair service website providing reliable solutions for home appliances and electronic repairs with a clean, responsive, and user-friendly interface.",
         image: universalrepair,
         tech: ["React", "TailwindCSS", "Framer Motion"],
+<<<<<<< HEAD
         link: "https://www.universalrepairpoint.com",
+=======
+        link: https://www.universalrepairpoint.com",
+>>>>>>> e6ae7b20b66996a04127a846812a0d086832509e
         code: "https://github.com/shubhamsainiiii/repairing_website",
     },
 ];
